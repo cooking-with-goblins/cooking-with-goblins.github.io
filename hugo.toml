@@ -1,5 +1,5 @@
 title = "Cooking With Goblins"
-baseURL = "https://cookingwithgoblins.com"
+baseURL = "https://https://github.com/cooking-with-goblins/cooking-with-goblins.github.io"
 tags = ["portfolio", "web design", "blog"]
 languageCode = "en-US"
 config = "config.toml"
