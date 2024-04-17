@@ -1,0 +1,44 @@
+<style>
+	@font-face {
+		font-family: "TakeCoffee";
+		src: url("/static/TakeCoffee.ttf");	
+	}
+
+	* {
+		font-family:"TakeCoffee";
+		font: "TakeCoffee";
+	}
+	.cwg-header {
+		color: {{ .Site.Params.accentColor }};
+		background-color: {{ .Site.Params.mainColor }};
+	}
+
+	.cwg-footer{
+		color: {{ .Site.Params.mainColor }};
+		background-color: {{ .Site.Params.accentColor }};
+	}
+
+	a:link {
+	  color: {{ .Site.Params.mainColor }};
+	  background-color: transparent;
+	  text-decoration: none;
+	}
+
+	a:visited {
+	  color: {{ .Site.Params.mainColor }};
+	  background-color: transparent;
+	  text-decoration: none;
+	}
+
+	a:hover {
+	  color: {{ .Site.Params.mainColor }};
+	  background-color: transparent;
+	  text-decoration: underline;
+	}
+
+	a:active {
+	  color: {{ .Site.Params.mainColor }};
+	  background-color: transparent;
+	  text-decoration: underline;
+	}
+</style>
