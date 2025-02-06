@@ -1,6 +1,11 @@
 :root{
     --main-color: hsl(273.85, 34.51%, 44.31%);
     --text-color: hsl(273.6, 100%, 75.49%);
+    --secondary-color: hsl(140, 60%, 47%);
+}
+
+a {
+    color: var(--secondary-color);
 }
 
 body {
@@ -32,6 +37,7 @@ nav ul {
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: .5em;
     list-style: none;
     padding: 0;
 }
@@ -39,4 +45,19 @@ nav ul {
 .logo {
     padding-top: 70px;
     width: 25%;
+}
+
+.socials li {
+    background-color: var(--main-color);
+    border-radius: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
 }
