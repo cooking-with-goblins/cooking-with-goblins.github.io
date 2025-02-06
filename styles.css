@@ -24,8 +24,19 @@ body {
     font-size: calc(var(--scale-base) * pow(var(--scale-ratio), 0));
     gap: .75em;
     justify-content: center;
-    margin: 0 1em;
+    align-items: center;
+    padding: 0 1em;
     min-height: 100vh;
+}
+
+@media screen and (min-width:1025px) {
+    body {
+        padding: 0 25%;
+    }
+
+    main {
+        max-width: 25vw;
+    }
 }
 
 header {
@@ -39,7 +50,7 @@ main {
     color: var(--black-color);
     border: 0.141em solid var(--black-color);
     border-radius: 2.282em;
-    box-shadow: 10px 5px 5px var(--shadow-color);
+    box-shadow: 10px 10px 5px var(--shadow-color);
     padding: 1em;
 }
 
@@ -71,6 +82,7 @@ nav ul {
     background-color: var(--main-color);
     border: 0.141em solid var(--black-color);
     border-radius: 2em;
+    box-shadow: 5px 5px 10px var(--shadow-color);
     height: calc(var(--scale-base) * pow(var(--scale-ratio), 3));
     text-align: center;
     width: 100%;
