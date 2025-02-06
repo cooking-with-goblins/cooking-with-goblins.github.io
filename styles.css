@@ -1,6 +1,11 @@
+:root{
+    --main-color: #764a98;
+    --text-color: #c882ff;
+}
+
 body {
-    background-color: #764a98;
-    color: #c882ff;
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 
 .logo {
