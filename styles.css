@@ -2,6 +2,9 @@
     --main-color: hsl(273.85, 34.51%, 44.31%);
     --text-color: hsl(273.6, 100%, 75.49%);
     --secondary-color: hsl(140, 60%, 47%);
+    --highlight-color: hsl(331, 100%, 87%);
+    --shadow-color: hsl(273.85, 34.51%, 24.31%);
+    --black-color: hsl(279, 38%, 9%);
 }
 
 a {
@@ -10,7 +13,7 @@ a {
 
 body {
     background-color: var(--main-color);
-    color: var(--text-color);
+    color: var(--highlight-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,10 +29,10 @@ header {
 
 main {
     background-color: var(--text-color);
-    color: var(--main-color);
-    border: 0.141em solid black;
+    color: var(--black-color);
+    border: 0.141em solid var(--black-color);
     border-radius: 2.282em;
-    box-shadow: 10px 5px 5px hsl(273.85, 34.51%, 24.31%);
+    box-shadow: 10px 5px 5px var(--shadow-color);
     padding: 1em;
 }
 
