@@ -39,10 +39,6 @@ body {
     }
 }
 
-footer {
-    /* margin-top: auto; */
-}
-
 header {
     align-items: center;
     display: flex;
@@ -89,10 +85,13 @@ nav ul {
     box-shadow: 5px 5px 10px var(--shadow-color);
     height: calc(var(--scale-base) * pow(var(--scale-ratio), 3));
     text-align: center;
+    transition: zoom .2s, background-color .2s;
+    transition-timing-function: ease-in-out;
     width: 100%;
 }
 
 .socials li:hover {
+    background-color: var(--shadow-color);
     zoom: 115%;
 }
 
