@@ -39,6 +39,10 @@ body {
     }
 }
 
+footer {
+    /* margin-top: auto; */
+}
+
 header {
     align-items: center;
     display: flex;
