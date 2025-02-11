@@ -95,6 +95,16 @@ nav ul {
     zoom: 115%;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+    .socials li {
+        transition: none;
+    }
+
+    .socials li:hover {
+        zoom: unset;
+    }
+}
+
 .socials a {
     display: flex;
     justify-content: center;
