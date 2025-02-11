@@ -21,16 +21,12 @@
     --bg-color: var(--secondary-color-darker);
     --shadow-color: var(--black-color-lighter);
     --link-color: var(--primary-color-darker);
-}
 
-@media screen and (prefers-color-scheme: light) {
-    :root{
-        --theme-color: var(--secondary-color);
-        --bg-color: var(--white-color);
-        --text-color: var(--black-color);
-        --link-color: var(--primary-color-darker);
-        --shadow-color:var(--black-color-lighter);
-    }
+    --theme-color: var(--primary-color-lighter);
+    --bg-color: var(--white-color);
+    --text-color: var(--black-color);
+    --link-color: var(--primary-color-darker);
+    --shadow-color:var(--black-color-lighter);
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -97,7 +93,7 @@ nav ul {
 }
 
 .button {
-    background-color: var(--theme-color);
+    background-color: var(--secondary-color);
     border: 0.141em solid var(--black-color);
     border-radius: 2em;
     box-shadow: 5px 5px 10px var(--shadow-color);
