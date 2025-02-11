@@ -1,23 +1,56 @@
 @import url("fonts/take coffee/Take Coffee.css");
 
 :root{
-    --main-color: hsl(273.85, 34.51%, 44.31%);
-    --text-color: hsl(273.6, 100%, 75.49%);
-    --secondary-color: hsl(140, 60%, 47%);
-    --highlight-color: hsl(331, 100%, 87%);
-    --shadow-color: hsl(273.85, 34.51%, 24.31%);
-    --black-color: hsl(279, 38%, 9%);
     --scale-base: 1em;
     --scale-ratio: 1.333;
+
+    --primary-color-darker: hsl(141, 60%, 24%);
+    --primary-color: hsl(140, 61%, 47%);
+    --primary-color-lighter: hsl(141, 100%, 93%);
+    --secondary-color-darker: hsl(273.85, 34.51%, 44.31%);
+    --secondary-color: hsl(273.6, 100%, 75.49%);
+    --tertiary-color: hsl(331, 100%, 87%);
+    --white-color: hsl(332, 100%, 97%);
+    --black-color: hsl(279, 38%, 9%);
+    --black-color-lighter: hsl(273.85, 34.51%, 24.31%);
+
+    --highlight-color: var(--tertiary-color);
+    
+    --text-color: var(--black-color);
+    --theme-color: var(--secondary-color-darker);
+    --bg-color: var(--secondary-color-darker);
+    --shadow-color: var(--black-color-lighter);
+    --link-color: var(--primary-color-darker);
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root{
+        --theme-color: var(--secondary-color);
+        --bg-color: var(--white-color);
+        --text-color: var(--black-color);
+        --link-color: var(--primary-color-darker);
+        --shadow-color:var(--black-color-lighter);
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root{
+        --text-color: var(--white-color);
+        --theme-color: var(--secondary-color-darker);
+        --bg-color: var(--secondary-color);
+        --shadow-color: var(--black-color-lighter);
+        --link-color: var(--primary-color-darker);
+    }
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--link-color);
+    font-weight: 600;
 }
 
 body {
-    background-color: var(--main-color);
-    color: hsl(332, 100%, 97%);
+    background-color: var(--theme-color);
+    color: var(--white-color);
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
@@ -46,8 +79,8 @@ header {
 }
 
 main {
-    background-color: var(--text-color);
-    color: var(--black-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     border: 0.141em solid var(--black-color);
     border-radius: 2.282em;
     box-shadow: 10px 10px 5px var(--shadow-color);
@@ -63,6 +96,13 @@ nav ul {
     padding: 0;
 }
 
+.button {
+    background-color: var(--theme-color);
+    border: 0.141em solid var(--black-color);
+    border-radius: 2em;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+}
+
 .company-name {
     font-family: 'Take Coffee';
     font-size: 1.8em;
@@ -74,15 +114,11 @@ nav ul {
 }
 
 .socials {
-    font-weight: 600;
+    --link-color: var(--primary-color-lighter);
     padding-top: .75em;
 }
 
 .socials li {
-    background-color: var(--main-color);
-    border: 0.141em solid var(--black-color);
-    border-radius: 2em;
-    box-shadow: 5px 5px 10px var(--shadow-color);
     height: calc(var(--scale-base) * pow(var(--scale-ratio), 3));
     text-align: center;
     transition: zoom .2s, background-color .2s;
