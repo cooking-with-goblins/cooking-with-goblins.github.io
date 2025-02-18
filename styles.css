@@ -105,6 +105,14 @@ nav ul {
     width: 8rem;
 }
 
+.icon {
+    color: var(--highlight-color);
+    fill: var(--highlight-color);
+    height: 1em;
+    font-size: 1rem;
+    width: 1em;
+}
+
 .socials {
     padding-top: .75em;
 }
