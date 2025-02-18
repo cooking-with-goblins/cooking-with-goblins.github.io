@@ -125,6 +125,7 @@ nav ul {
     fill: var(--highlight-color);
     filter: drop-shadow( 5px 5px 10px var(--shadow-color));
     max-height: 2.141em;
+    max-width: 2.141em;
 }
 
 .socials {
@@ -134,14 +135,14 @@ nav ul {
 .socials li {
     height: calc(var(--scale-base) * pow(var(--scale-ratio), 3));
     text-align: center;
-    transition: zoom .2s, background-color .2s;
+    transition: font-size .2s, background-color .2s;
     transition-timing-function: ease-in-out;
     width: 100%;
 }
 
 .socials li:hover {
     background-color: var(--highlight-color);
-    zoom: 115%;
+    font-size: 115%;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -156,7 +157,7 @@ nav ul {
 
 .socials a {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-decoration: none;
     width: 100%;
