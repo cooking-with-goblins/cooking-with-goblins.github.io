@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+{%- if page.title -%}
+	<h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+
+{{ content }}
+
+{%- if site.games.size > 0 -%}
+	<section id="games">
+		<h2>Games</h2>
+		<ul class="showcase">
+			{% for game in site.games %}
+				<li>
+					<img src="favicon.ico" alt="">
+					<h3>{{game.name}}</h3>
+					{% if game.tags.size > 0 %}
+						<ul class="tags">
+							{%  for tag in game.tags %} 
+								<li>{{tag}}</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					<a class="block-emphasis" href="{{game.link.target}}" target="_blank">{{game.link.text}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{%- endif -%}
+
+<section id="about" class="alternating">
+	<h2>About us</h2>
+	<section>
+		<h3>The history</h3>
+		<p>Cooking with Goblins is an independent game development cooperative based in Copenhagen, Denmark. In early 2024, amidst all of the layoffs and studio shutdowns, we decided that we just wanted to make games and so we started on this journey of creating one of the first game development cooperatives in Denmark.</p>
+		<p>In addition to making games, we wanted to explore a different way of structuring a game studio, to design our own workspace, and to nurture our creativity rather than burning it out.</p>
+		<p>At the beginning of 2025, after doing extensive research, learning new skills, and learning what works for us, we officially registered Cooking with Goblins A.M.B.A.</p>
+	</section>
+	<section>
+		<h3>The goal</h3>
+		<p>Truthfully, none of us are businesspeople. We are creatives first and foremost. Our plan is simple: to make and sell games that we believe in while maintaining operational ethics that are up to our standard. We are genre agnostic and hope to keep our development and communication open.</p>
+	</section>
+	{% if site.people.size > 0 %}
+		<section>
+			<h3>The team</h3>
+			<ul class="showcase">
+				{%  for person in site.people %} 
+				<li>
+					<img src="{{person.goblin}}">
+					<p class="block-emphasis">{{person.name}}</p>
+					<p>{{person.position}}</p>
+				</li>
+			{% endfor %}
+			</ul>
+		</section>
+	{% endif %}
+</section>
+
+{%- if site.pages.size > 1 -%}
+{%- endif -%}
+
+{%- if site.posts.size > 0 -%}
+	<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+	<ul class="post-list">
+	{%- for post in site.posts -%}
+	<li>
+		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+		<span class="post-meta">{{ post.date | date: date_format }}</span>
+		<h3>
+		<a class="post-link" href="{{ post.url | relative_url }}">
+			{{ post.title | escape }}
+		</a>
+		</h3>
+		{%- if site.show_excerpts -%}
+		{{ post.excerpt }}
+		{%- endif -%}
+	</li>
+	{%- endfor -%}
+	</ul>
+
+	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+{%- endif -%}

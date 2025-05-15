@@ -1,10 +1,13 @@
 @charset "utf-8"
+@use "sass:color"
 
-@import url("fonts/take coffee/Take Coffee.css")
+//@import url("fonts/take coffee/Take Coffee.css")
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
+$base-font-family: "Poor Story", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
 $base-font-size:   16px !default
 $base-font-weight: 400 !default
 $small-font-size:  $base-font-size * 0.875 !default
@@ -17,8 +20,10 @@ $background-color: #fdfdfd !default
 $brand-color:      #2a7ae2 !default
 
 $grey-color:       #828282 !default
-$grey-color-light: lighten($grey-color, 40%) !default
-$grey-color-dark:  darken($grey-color, 25%) !default
+// $grey-color-light: lighten($grey-color, 40%) !default
+// $grey-color-dark:  darken($grey-color, 25%) !default
+$grey-color-light: color.scale($grey-color, $lightness: 40%) !default
+$grey-color-dark:  color.scale($grey-color, $lightness: -25%) !default
 
 $table-text-align: left !default
 
@@ -29,26 +34,28 @@ $on-palm:          600px !default
 $on-laptop:        800px !default
 
 :root
-    --scale-base: 1em;
-    --scale-ratio: 1.333;
+    --scale-base: 1em
+    --scale-ratio: 1.333
 
-    --primary-color-darker: hsl(141, 60%, 24%);
-    --primary-color: hsl(140, 61%, 47%);
-    --primary-color-lighter: hsl(141, 100%, 93%);
-    --secondary-color-darker: hsl(273.85, 34.51%, 44.31%);
-    --secondary-color: hsl(273.6, 100%, 75.49%);
-    --tertiary-color: hsl(331, 100%, 87%);
-    --white-color: hsl(332, 100%, 97%);
-    --black-color: hsl(279, 38%, 9%);
-    --black-color-lighter: hsl(273.85, 34.51%, 24.31%);
+    --primary-color-darker: hsl(153, 54%, 22%)
+    --primary-color: hsl(154, 88%, 61%)
+    --primary-color-lighter: hsl(141, 100%, 93%)
+    --secondary-color-darker: hsl(307, 96%, 69%)
+    --secondary-color: hsl(307, 100%, 79%)
+    --tertiary-color: hsl(259, 48%, 41%)
+    --tertiary-color-darker: hsl(260, 71%, 21%)
+    --white-color: hsl(332, 100%, 97%)
+    --black-color: hsl(260, 96%, 10%)
+    --black-color-lighter: hsl(260, 72%, 21%)
 
-    --bg-color: var(--white-color);
-    --highlight-color: var(--tertiary-color);
-    --link-color: var(--primary-color-darker);
-    --shadow-color:var(--black-color-lighter);
-    --text-color: var(--black-color);
-    --theme-color: var(--primary-color-lighter);
-    --theme-text-color: var(--black-color);
+    --bg-color: var(--white-color)
+    --highlight-color: var(--tertiary-color)
+    --link-color: var(--primary-color-darker)
+    --shadow-color:var(--black-color-lighter)
+    --text-color: white
+    --heading-color: var(--primary-color)
+    --theme-color: var(--primary-color-lighter)
+    --theme-text-color: var(--black-color)
 
 
 // Use media queries like this:
@@ -64,6 +71,12 @@ $on-laptop:        800px !default
 
 @mixin relative-font-size($ratio) 
   font-size: $base-font-size * $ratio
+
+@mixin pill-shaped()
+    border-radius: 9999px
+
+@mixin rounded-rect()
+    border-radius: 2rem
 
 // Import partials.
 @import "minima/themes", "minima/base", "minima/layout", "minima/syntax-highlighting"

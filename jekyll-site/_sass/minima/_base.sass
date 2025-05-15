@@ -16,6 +16,7 @@ body
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family
   color: var(--text-color)
   background-color: var(--bg-color)
+  background: linear-gradient(var(--shadow-color), var(--black-color) 75%)
   -webkit-text-size-adjust: 100%
   -webkit-font-feature-settings: "kern" 1
      -moz-font-feature-settings: "kern" 1
@@ -70,13 +71,18 @@ figcaption
 /**
  * Lists
  */
-ul, ol
-  margin-left: $spacing-unit
+ul
+  list-style: none
+//ul, ol
+//	  margin-left: $spacing-unit
 
 li
   > ul,
   > ol
     margin-bottom: 0
+
+.bullet-list
+  list-style: initial
 
 
 
@@ -84,6 +90,8 @@ li
  * Headings
  */
 h1, h2, h3, h4, h5, h6
+  color: var(--heading-color)
+  font-family: "Take Coffee"
   font-weight: $base-font-weight
 
 
@@ -96,7 +104,8 @@ a
   text-decoration: none
 
   &:visited
-    color: darken($brand-color, 15%)
+    //color: darken($brand-color, 15%)
+    color: color.scale($brand-color, $lightness: -15%)
 
   &:hover
     color: $text-color
@@ -204,20 +213,55 @@ table
   margin-bottom: $spacing-unit
   width: 100%
   text-align: $table-text-align
-  color: lighten($text-color, 18%)
+  //color: lighten($text-color, 18%)
+  color: color.scale($text-color, $lightness: 18%)
   border-collapse: collapse
   border: 1px solid $grey-color-light
   tr
     &:nth-child(even)
-      background-color: lighten($grey-color-light, 6%)
+      //background-color: lighten($grey-color-light, 6%)
+      background-color: color.scale($grey-color, $lightness: 6%)
 
   th, td
     padding: ($spacing-unit * 0.3333333333) ($spacing-unit * 0.5)
 
   th
-    background-color: lighten($grey-color-light, 3%)
-    border: 1px solid darken($grey-color-light, 4%)
-    border-bottom-color: darken($grey-color-light, 12%)
+    //background-color: lighten($grey-color-light, 3%)
+    background-color: color.scale($grey-color, $lightness: 3%)
+    //border: 1px solid darken($grey-color-light, 4%)
+    border: 1px solid color.scale($grey-color, $lightness: -4%)
+    //border-bottom-color: darken($grey-color-light, 12%)
+    border-bottom-color: color.scale($grey-color, $lightness: -12%)
 
   td
     border: 1px solid $grey-color-light
+  
+.alternating
+  section
+    @include rounded-rect
+    background-color: var(--block-color)
+    padding: 2em
+  :nth-child(even)
+    --block-color: var(--tertiary-color)
+    *
+      --block-color: var(--tertiary-color-darker)
+  :nth-child(odd)
+    --block-color: var(--tertiary-color-darker)
+    *
+      --block-color: var(--tertiary-color)
+
+.showcase
+  display: flex
+  flex-direction: row
+  > *
+    @include rounded-rect
+    background-color: var(--block-color)
+    flex-grow: 1
+    
+.block-emphasis
+  @include rounded-rect
+  background-color: var(--secondary-color-darker)
+  border: 0.1rem solid var(--secondary-color)
+  color: black
+
+    
