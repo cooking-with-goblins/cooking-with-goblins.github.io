@@ -1,0 +1,70 @@
+@charset "utf-8"
+
+@import url("fonts/take coffee/Take Coffee.css")
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
+$base-font-size:   16px !default
+$base-font-weight: 400 !default
+$small-font-size:  $base-font-size * 0.875 !default
+$base-line-height: 1.5 !default
+
+$spacing-unit:     30px !default
+
+$text-color:       #111 !default
+$background-color: #fdfdfd !default
+$brand-color:      #2a7ae2 !default
+
+$grey-color:       #828282 !default
+$grey-color-light: lighten($grey-color, 40%) !default
+$grey-color-dark:  darken($grey-color, 25%) !default
+
+$table-text-align: left !default
+
+// Width of the content area
+$content-width:    800px !default
+
+$on-palm:          600px !default
+$on-laptop:        800px !default
+
+:root
+    --scale-base: 1em;
+    --scale-ratio: 1.333;
+
+    --primary-color-darker: hsl(141, 60%, 24%);
+    --primary-color: hsl(140, 61%, 47%);
+    --primary-color-lighter: hsl(141, 100%, 93%);
+    --secondary-color-darker: hsl(273.85, 34.51%, 44.31%);
+    --secondary-color: hsl(273.6, 100%, 75.49%);
+    --tertiary-color: hsl(331, 100%, 87%);
+    --white-color: hsl(332, 100%, 97%);
+    --black-color: hsl(279, 38%, 9%);
+    --black-color-lighter: hsl(273.85, 34.51%, 24.31%);
+
+    --bg-color: var(--white-color);
+    --highlight-color: var(--tertiary-color);
+    --link-color: var(--primary-color-darker);
+    --shadow-color:var(--black-color-lighter);
+    --text-color: var(--black-color);
+    --theme-color: var(--primary-color-lighter);
+    --theme-text-color: var(--black-color);
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2
+//     padding-left: $spacing-unit / 2
+//   }
+// }
+@mixin media-query($device)
+  @media screen and (max-width: $device)
+    @content
+
+@mixin relative-font-size($ratio) 
+  font-size: $base-font-size * $ratio
+
+// Import partials.
+@import "minima/themes", "minima/base", "minima/layout", "minima/syntax-highlighting"
+

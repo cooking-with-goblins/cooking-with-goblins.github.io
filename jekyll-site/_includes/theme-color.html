@@ -1,0 +1,18 @@
+{%- if site.data.theme.scheme -%}
+<meta name="color-scheme" content="{{site.data.theme.scheme}}" >
+{%- endif -%}
+
+{%- if site.data.theme.colors.default -%}
+<meta name="theme-color" content="{{site.data.theme.colors.default}}" >
+
+{%- endif -%}
+
+{%- if site.data.theme.colors.light -%}
+<meta name="theme-color" content="{{site.data.theme.colors.light}}" media="(prefers-color-scheme: light)" >
+
+{%- endif -%}
+
+{%- if site.data.theme.colors.dark -%}
+<meta name="theme-color" content="{{site.data.theme.colors.dark}}" media="(prefers-color-scheme: dark)">
+
+{%- endif -%}
