@@ -1,11 +1,13 @@
-<header class="site-header" role="banner">
-
+<header>
+  
+  {%comment%}
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
   </div>
-  <h1 class="site-title">{{site.title}}<small>{{site.tagline}}</small></h1>
+  {%endcomment%}
+  <h1>{{site.title}}<br><small>{{site.tagline}}</small></h1>
   <p>A Copenhagen based game development cooperative.</p>
   <p>Welcome to the kitchen.</p>
   <img src="/assets/img/Goblins.png">
