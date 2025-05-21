@@ -232,3 +232,34 @@ body > header // site-wide header
 
     @include media-query($on-laptop)
       @include relative-font-size(1.125)
+
+/**
+ * Showcase
+ */
+.showcase
+  
+
+.showcase
+  display: flex
+  flex-direction: row
+  gap: 1.141rem
+  > *
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    flex: 1
+    gap: .141rem
+    // TODO: More semantic selectors, what if a showcase doesn't have this layout?
+    :not(a, h3)
+      flex: 1
+  img
+    @include rounded-rect
+    align-self: stretch
+    background-color: var(--black-color)
+    border: 1px solid var(--primary-color)
+    // TODO: Better variable opacity solution, e.g. https://stackoverflow.com/a/41265350
+    box-shadow: 0 1px 8px 4px color-mix(in hsl, var(--primary-color) 25%, transparent)
+    // TODO: review relative color syntax, e.g. https://stackoverflow.com/a/71098929
+  .block-emphasis
+    padding:.3rem .5rem
+    
