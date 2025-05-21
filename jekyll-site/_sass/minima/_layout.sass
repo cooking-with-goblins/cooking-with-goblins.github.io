@@ -14,6 +14,7 @@ body > header // site-wide header
   width: 20vw
 
   &::before
+    @include raised
     background-color: var(--tertiary-color)
     content: ''
     position: absolute
@@ -238,9 +239,6 @@ body > header // site-wide header
 /**
  * Showcase
  */
-.showcase
-  
-
 .showcase
   display: flex
   flex-direction: row
