@@ -247,7 +247,7 @@ body > footer
   flex-direction: row
   gap: 1.141rem
   > *
-    @include rounded-rect
+    +rounded-rect
     align-items: flex-start
     background-color: var(--block-color)
     display: flex
@@ -257,6 +257,8 @@ body > footer
     // TODO: More semantic selectors, what if a showcase doesn't have this layout?
     :not(a, h3)
       flex: 1
+    &:not(:has(.featured))
+      +raised
   img
     @include rounded-rect
     align-self: stretch

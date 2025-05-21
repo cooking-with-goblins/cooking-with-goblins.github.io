@@ -65,21 +65,21 @@ $on-laptop:        800px !default
 //     padding-left: $spacing-unit / 2
 //   }
 // }
-@mixin media-query($device)
+=media-query($device)
   @media screen and (max-width: $device)
     @content
 
-@mixin relative-font-size($ratio) 
+=relative-font-size($ratio) 
   font-size: $base-font-size * $ratio
 
-@mixin pill-shaped()
+=pill-shaped
     border-radius: 9999px
 
-@mixin rounded-rect()
+=rounded-rect
     border-radius: clamp(.5rem, 1vmin, 3rem)
     border-radius: 1vmin
 
-@mixin raised()
+=raised
   box-shadow: 0 4px 16.1px 7px hsla(0, 0%, 0%, 25%)
 
 // Import partials.

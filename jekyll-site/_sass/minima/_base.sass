@@ -179,7 +179,7 @@ body > *
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
   max-width:         min(#{$content-width} - (#{$spacing-unit} * 2), 100vw)
-  @include media-query($on-laptop)
+  +media-query($on-laptop)
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
     max-width:         calc(#{$content-width} - (#{$spacing-unit}))
     max-width:         min(#{$content-width} - (#{$spacing-unit}), 100vw)
@@ -187,7 +187,7 @@ body > *
 main
   padding-right: $spacing-unit
   padding-left: $spacing-unit
-  @includ media-query($on-laptop)
+  +media-query($on-laptop)
     padding-right: $spacing-unit * 0.5
     padding-left: $spacing-unit * 0.5
 
@@ -253,8 +253,8 @@ table
   
 .alternating
   section
-    @include rounded-rect
-    @include raised
+    +rounded-rect
+    +raised
     background-color: var(--block-color)
     padding: 2em
   :nth-child(even)
@@ -267,7 +267,7 @@ table
       --block-color: var(--tertiary-color)
     
 .block-emphasis
-  @include rounded-rect
+  +rounded-rect
   background-color: var(--secondary-color-darker)
   border: 0.1rem solid var(--secondary-color)
   color: black
