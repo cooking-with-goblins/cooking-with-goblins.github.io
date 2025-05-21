@@ -247,7 +247,9 @@ body > footer
   flex-direction: row
   gap: 1.141rem
   > *
+    @include rounded-rect
     align-items: flex-start
+    background-color: var(--block-color)
     display: flex
     flex-direction: column
     flex: 1
@@ -258,11 +260,19 @@ body > footer
   img
     @include rounded-rect
     align-self: stretch
-    background-color: var(--black-color)
-    border: 1px solid var(--primary-color)
-    // TODO: Better variable opacity solution, e.g. https://stackoverflow.com/a/41265350
-    box-shadow: 0 1px 8px 4px color-mix(in hsl, var(--primary-color) 25%, transparent)
-    // TODO: review relative color syntax, e.g. https://stackoverflow.com/a/71098929
   .block-emphasis
     padding:.3rem .5rem
+  
+  @include media-query($on-palm)
+    overflow-x: scroll
+    > *
+      min-width: 42vw
+
+
+.featured
+  background-color: var(--black-color)
+  border: 1px solid var(--primary-color)
+  // TODO: Better variable opacity solution, e.g. https://stackoverflow.com/a/41265350
+  box-shadow: 0 1px 8px 4px color-mix(in hsl, var(--primary-color) 25%, transparent)
+  // TODO: review relative color syntax, e.g. https://stackoverflow.com/a/71098929
     

@@ -1,3 +1,6 @@
+html
+  max-width: 100vw
+  
 /**
  * Reset some basic elements
  */
@@ -172,20 +175,23 @@ pre
  * Wrapper
  */
 body > *
-  width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
-  width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
-main
-  padding-right: $spacing-unit
-  padding-left: $spacing-unit
   @extend %clearfix
-
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
+  max-width:         min(#{$content-width} - (#{$spacing-unit} * 2), 100vw)
   @include media-query($on-laptop)
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
     max-width:         calc(#{$content-width} - (#{$spacing-unit}))
+    max-width:         min(#{$content-width} - (#{$spacing-unit}), 100vw)
+
+main
+  padding-right: $spacing-unit
+  padding-left: $spacing-unit
+  @includ media-query($on-laptop)
     padding-right: $spacing-unit * 0.5
     padding-left: $spacing-unit * 0.5
 
-  
+
 
 /**
  * Clearfix
