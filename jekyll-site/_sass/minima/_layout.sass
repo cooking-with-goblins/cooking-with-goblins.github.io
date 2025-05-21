@@ -34,30 +34,35 @@ body > header // site-wide header
     &:visited
       //color: $grey-color-dark
 
-  nav
+  &+ nav
     display: flex
     font-family: "Take Coffee"
     font-size: 24px
     line-height: $base-line-height * $base-font-size * 2.25
+    position: sticky
+    top: 0
 
     .nav-trigger
-        display: none
+      display: none
 
     .menu-icon
-        display: none
+      display: none
 
     a
-        line-height: $base-line-height
+      line-height: $base-line-height
 
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child)
+      // Gaps between nav items, but not on the last one
+      &:not(:last-child)
         margin-right: 20px
-
+        
     ul
-        display: flex
-        gap: 1rem
-        justify-content: center
-        width: 100%
+      display: flex
+      gap: 1rem
+      justify-content: center
+      width: 100%
+    
+    li:has(a:active)
+      background-color: white
 
 //   @include media-query($on-palm)
 //     position: absolute
