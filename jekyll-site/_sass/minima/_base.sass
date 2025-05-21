@@ -171,13 +171,10 @@ pre
 /**
  * Wrapper
  */
+body > *
+  width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
+  width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
 main
-  min-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
-  min-width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
-  margin-right: auto
-  margin-left: auto
   padding-right: $spacing-unit
   padding-left: $spacing-unit
   @extend %clearfix
@@ -188,7 +185,7 @@ main
     padding-right: $spacing-unit * 0.5
     padding-left: $spacing-unit * 0.5
 
-
+  
 
 /**
  * Clearfix
