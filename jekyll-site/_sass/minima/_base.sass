@@ -178,11 +178,11 @@ body > *
   @extend %clearfix
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2))
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2))
-  max-width:         min(#{$content-width} - (#{$spacing-unit} * 2), 100vw)
+  width:             min(#{$content-width} - (#{$spacing-unit} * 2), 100vw)
   +media-query($on-laptop)
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
     max-width:         calc(#{$content-width} - (#{$spacing-unit}))
-    max-width:         min(#{$content-width} - (#{$spacing-unit}), 100vw)
+    width:             min(#{$content-width} - (#{$spacing-unit}), 100vw)
 
 main
   padding-right: $spacing-unit
