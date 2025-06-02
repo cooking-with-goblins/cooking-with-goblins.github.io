@@ -276,8 +276,9 @@ body > footer
  */
 .showcase
   display: flex
-  flex-direction: row
+  flex-flow: row wrap
   gap: 1.141rem
+  flex: 1
   > *
     +rounded-rect
     align-items: flex-start
@@ -292,15 +293,14 @@ body > footer
     &:not(:has(.featured))
       +raised
   img
-    @include rounded-rect
+    +rounded-rect
     align-self: stretch
   .block-emphasis
     padding:.3rem .5rem
   
   @include media-query($on-palm)
-    overflow-x: scroll
     > *
-      min-width: 42vw
+      min-width: 33vw
 
 
 .featured
