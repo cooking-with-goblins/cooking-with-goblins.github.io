@@ -216,6 +216,12 @@ body > footer
 /**
  * Page content
  */
+main
+  padding: $spacing-unit
+  flex: 1
+  +media-query-progressive($tablet-landscape-up)
+    padding: $spacing-unit 0
+
 main > section 
   display: flex
   flex-direction: column
@@ -228,10 +234,6 @@ main > section
     transform: rotate(-1.62deg)
     +media-query-progressive($tablet-up)
       width: 25%
-
-.page-content
-  padding: $spacing-unit 0
-  flex: 1
 
 .page-heading
   @include relative-font-size(2)
