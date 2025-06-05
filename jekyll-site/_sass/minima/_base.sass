@@ -1,3 +1,6 @@
+*
+  box-sizing: border-box
+
 html
   max-width: 100vw
   scroll-behavior: smooth
@@ -5,7 +8,7 @@ html
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
+body, %headings,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure
   margin: 0
@@ -45,7 +48,7 @@ em
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+%headings,
 p, blockquote, pre,
 ul, ol, dl, figure,
 section > section,
@@ -104,6 +107,9 @@ li
  * Headings
  */
 h1, h2, h3, h4, h5, h6
+  @extend %headings !optional
+
+%headings
   color: var(--heading-color)
   font-family: "Take Coffee"
   font-weight: $base-font-weight

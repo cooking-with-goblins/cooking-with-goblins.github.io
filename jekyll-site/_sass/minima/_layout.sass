@@ -12,6 +12,9 @@ body > header // site-wide header
 
   text-align: center
 
+  +media-query-progressive($tablet-up)
+    padding: 0 10vw
+
   // &::before
   //   @include raised
   //   background-color: var(--tertiary-color)
@@ -136,7 +139,7 @@ body > footer
   a
     color: var(--text-color)
 
-  > h1, > h2, > h3, > h4, > h5, > h6
+  > %headings
     @include relative-font-size(1.125)
     margin-bottom: $spacing-unit * 0.5
 
@@ -213,6 +216,19 @@ body > footer
 /**
  * Page content
  */
+main > section 
+  display: flex
+  flex-direction: column
+  > %headings
+    align-self: flex-start
+    background: white
+    background: no-repeat left / contain url("/assets/img/sign-plank.png")
+    width: 50%
+    text-align: center
+    transform: rotate(-1.62deg)
+    +media-query-progressive($tablet-up)
+      width: 25%
+
 .page-content
   padding: $spacing-unit 0
   flex: 1
