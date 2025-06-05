@@ -135,8 +135,8 @@ body > footer
     flex-grow: 1
 
   nav:has(ul)
-    padding-left: 6rem
-    padding-right: 6rem
+    +media-query-progressive($tablet-up)
+      padding: 0 6rem
     > ul
       display: flex
       gap: 4rem
