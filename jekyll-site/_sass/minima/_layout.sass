@@ -26,15 +26,20 @@ body > header // site-wide header
 
   h1
     @include relative-font-size(1.625)
-    background: #90523c
+    //background: #90523c
+    //background: no-repeat center url("/assets/img/sign-large.png")
     font-weight: 300
     line-height: $base-line-height * $base-font-size * 2.25
     letter-spacing: -1px
     margin-bottom: 0
+    word-spacing: 9999px
 
     &,
     &:visited
       //color: $grey-color-dark
+    
+    small
+      //word-spacing: initial
 
   &+ nav
     display: flex
