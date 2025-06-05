@@ -2,6 +2,7 @@
  * Site header
  */
 body > header // site-wide header
+  background-color: var(--tertiary-color)
   display: flex
   flex-direction: column
   min-height: $spacing-unit * 1.865
@@ -11,18 +12,16 @@ body > header // site-wide header
 
   text-align: center
 
-  width: 20vw
-
-  &::before
-    @include raised
-    background-color: var(--tertiary-color)
-    content: ''
-    position: absolute
-    top: 2rem
-    bottom: 16rem
-    left: -20vw
-    right: -20vw
-    z-index: -1
+  // &::before
+  //   @include raised
+  //   background-color: var(--tertiary-color)
+  //   content: ''
+  //   position: absolute
+  //   top: 2rem
+  //   bottom: 16rem
+  //   left: -20vw
+  //   right: -20vw
+  //   z-index: -1
 
 
   h1
