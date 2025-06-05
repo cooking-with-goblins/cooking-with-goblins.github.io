@@ -33,6 +33,11 @@ $content-width:    800px !default
 $on-palm:          600px !default
 $on-laptop:        800px !default
 
+$tablet-up:             600px   !default
+$tablet-landscape-up:   900px   !default
+$desktop-up:            1200px  !default
+$big-desktop-up:        1800px  !default
+
 :root
     --scale-base: 1em
     --scale-ratio: 1.333
@@ -84,6 +89,10 @@ $on-laptop:        800px !default
 =media-query($device)
   @media screen and (max-width: $device)
     @content
+
+=media-query-progressive($device)
+    @media screen and (min-width: $device)
+        @content
 
 =relative-font-size($ratio) 
   font-size: $base-font-size * $ratio
