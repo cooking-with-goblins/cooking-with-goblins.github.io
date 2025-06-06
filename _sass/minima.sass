@@ -38,6 +38,31 @@ $tablet-landscape-up:   900px   !default
 $desktop-up:            1200px  !default
 $big-desktop-up:        1800px  !default
 
+
+=media-query($device)
+  @media screen and (max-width: $device)
+    @content
+
+=media-query-progressive($device)
+    @media screen and (min-width: $device)
+        @content
+
+=relative-font-size($ratio) 
+  font-size: $base-font-size * $ratio
+
+=pill-shaped
+    border-radius: 9999px
+
+=rounded-rect
+    border-radius: clamp(.5rem, 1vmin, 3rem)
+    border-radius: 1vmin
+
+=raised
+    box-shadow: 0 4px 16.1px 7px hsla(0, 0%, 0%, 25%)
+
+// Import partials.
+@import "minima/themes", "minima/base", "minima/layout", "minima/syntax-highlighting"
+
 :root
     --scale-base: 1em
     --scale-ratio: 1.333
@@ -77,36 +102,3 @@ $big-desktop-up:        1800px  !default
 [data-brand="facebook"]
     --brand-color: hsl(210, 100%, 40%)
     --icon-shape: "assets/brands.svg#facebook"
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2
-//     padding-left: $spacing-unit / 2
-//   }
-// }
-=media-query($device)
-  @media screen and (max-width: $device)
-    @content
-
-=media-query-progressive($device)
-    @media screen and (min-width: $device)
-        @content
-
-=relative-font-size($ratio) 
-  font-size: $base-font-size * $ratio
-
-=pill-shaped
-    border-radius: 9999px
-
-=rounded-rect
-    border-radius: clamp(.5rem, 1vmin, 3rem)
-    border-radius: 1vmin
-
-=raised
-  box-shadow: 0 4px 16.1px 7px hsla(0, 0%, 0%, 25%)
-
-// Import partials.
-@import "minima/themes", "minima/base", "minima/layout", "minima/syntax-highlighting"
-

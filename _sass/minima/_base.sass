@@ -280,3 +280,17 @@ table
   color: black
 
     
+/**
+ * Accessibility helpers
+ */
+%offscreen
+  position: absolute
+  transform: translateY(-100%)
+
+%offscreen-restore
+  transform: translateY(0%)
+
+.skip-link
+  @extend %offscreen
+  &:focus
+    @extend %offscreen-restore
