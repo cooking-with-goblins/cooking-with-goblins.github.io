@@ -50,9 +50,7 @@ layout: default
 				<li>
 					<img src="{{person.goblin}}">
 					{% if person.link %}
-					<p class="block-emphasis" >
-						<a href="{{person.link}}">{{person.name}}</a>
-					</p>
+					<a class="block-emphasis" href="{{person.link}}" target="_blank">{{person.name}}</a>
 					{% else %}
 					<p class="block-emphasis">{{person.name}}</p>
 					{% endif %}

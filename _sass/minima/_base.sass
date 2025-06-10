@@ -275,9 +275,12 @@ table
     
 .block-emphasis
   +rounded-rect
-  background-color: var(--secondary-color-darker)
+  background-color: var(--tertiary-color)
   border: 0.1rem solid var(--secondary-color)
-  color: black
+  color: var(--white-color)
+  &:has(a), &:is(a)
+    background-color: var(--secondary-color-darker)
+    color: var(--white-color)
 
     
 /**

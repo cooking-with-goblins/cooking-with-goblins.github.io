@@ -302,6 +302,12 @@ header:not(body > header)
       flex: 1
     &:not(:has(.featured))
       +raised
+    &:not(:has(h3))
+        align-items: center
+        gap: .5rem
+        padding: 1rem
+        +media-query-progressive($tablet-up)
+          gap: 1rem
   img
     +rounded-rect
     align-self: stretch
