@@ -46,10 +46,16 @@ layout: default
 		<section>
 			<h3>The team</h3>
 			<ul class="showcase">
-				{%  for person in site.people %} 
+				{%  for person in site.people %}
 				<li>
 					<img src="{{person.goblin}}">
+					{% if person.link %}
+					<p class="block-emphasis" >
+						<a href="{{person.link}}">{{person.name}}</a>
+					</p>
+					{% else %}
 					<p class="block-emphasis">{{person.name}}</p>
+					{% endif %}
 					<p>{{person.position}}</p>
 				</li>
 			{% endfor %}
