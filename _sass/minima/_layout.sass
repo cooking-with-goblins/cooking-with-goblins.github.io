@@ -135,17 +135,23 @@ body > footer
     flex-grow: 1
 
   nav:has(ul)
+    //padding: 0 6rem
     +media-query-progressive($tablet-up)
       padding: 0 6rem
     > ul
       display: flex
       gap: 4rem
+      padding: 0 .5rem
+      +media-query-progressive($tablet-up)
+        padding: 0
       a
         +pill-shaped
         aspect-ratio: 1
         background-color: black
         display: flex
-        padding: 1.3rem
+        padding: .6rem
+        +media-query-progressive($tablet-up)
+          padding: 1.3rem
     svg
       fill: hsl(157, 58%, 51%)
 
