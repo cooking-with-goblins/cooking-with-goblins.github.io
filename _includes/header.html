@@ -22,8 +22,10 @@
 		<li class="button">
 			<a href="/#about">About</a>
 		</li>
+		{%- if site.posts.size > 0 -%}
 		<li class="button">
 			<a href="/blog">Blog</a>
 		</li>
+		{% endif %}
 	</ul>
 </nav>
