@@ -2,10 +2,9 @@
  * Site header
  */
 body > header // site-wide header
-  background-color: var(--tertiary-color)
   +flex-column
+  background-color: var(--tertiary-color)
   min-height: $spacing-unit * 1.865
-
   text-align: center
 
   +media-query-progressive($tablet-up)
@@ -28,12 +27,15 @@ body > header // site-wide header
       //word-spacing: initial
 
   &+ nav
+    background-color: var(--tertiary-color)
     display: flex
     font-family: "Take Coffee"
     font-size: 24px
     line-height: $base-line-height * $base-font-size * 2.25
     position: sticky
     top: 0
+    max-width: 100vw
+    width: 100vw
 
     a
       line-height: $base-line-height
@@ -47,6 +49,8 @@ body > header // site-wide header
       gap: 1rem
       justify-content: center
       width: 100%
+      margin: 0
+      padding: .5rem 0
     
     li:has(a:active)
       background-color: white
