@@ -3,8 +3,7 @@
  */
 body > header // site-wide header
   background-color: var(--tertiary-color)
-  display: flex
-  flex-direction: column
+  +flex-column
   min-height: $spacing-unit * 1.865
 
   text-align: center
@@ -205,8 +204,7 @@ main
     padding: $spacing-unit 0
 
 main > section
-  display: flex
-  flex-direction: column
+  +flex-column
   > %headings
     align-self: flex-start
     background: white
