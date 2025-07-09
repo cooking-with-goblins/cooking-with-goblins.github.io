@@ -3,7 +3,6 @@
  */
 body > header // site-wide header
   +flex-column
-  background-color: var(--tertiary-color)
   min-height: $spacing-unit * 1.865
   text-align: center
 
@@ -27,7 +26,6 @@ body > header // site-wide header
       //word-spacing: initial
 
   &+ nav
-    background-color: var(--tertiary-color)
     display: flex
     font-family: "Take Coffee"
     font-size: 24px
@@ -52,9 +50,6 @@ body > header // site-wide header
       width: 100%
       margin: 0
       padding: .5rem 0
-    
-    li:has(a:active)
-      background-color: white
 
 //   @include media-query($on-palm)
 //     position: absolute
@@ -107,19 +102,11 @@ body > header // site-wide header
  * Site footer
  */
 body > footer
-  --text-color: black
   align-items: center
-  color: var(--text-color)
-  background-image: url("/assets/img/slime_long 3.png")
-  background-size: cover
-  border-top: 1px solid $grey-color-light
   display: flex
   flex-direction: column
   gap: 1rem
   //padding: $spacing-unit 0
-
-  a
-    color: var(--text-color)
 
   > %headings
     @include relative-font-size(1.125)
@@ -127,7 +114,6 @@ body > footer
 
   nav:not(nav:has(ul))
     align-self: stretch
-    border-bottom: 2px solid black
     padding: .5rem 2rem
     text-align: right
     flex-grow: 1
@@ -145,13 +131,11 @@ body > footer
       a
         +pill-shaped
         aspect-ratio: 1
-        background-color: black
         display: flex
         padding: .6rem
         +media-query-progressive($tablet-up)
           padding: 1.3rem
-    svg
-      fill: hsl(157, 58%, 51%)
+
 
 .contact-list,
 .social-media-list
@@ -291,7 +275,6 @@ header:not(body > header)
   > *
     +rounded-rect
     align-items: flex-start
-    background-color: var(--block-color)
     display: flex
     flex-direction: column
     flex: 1
@@ -316,12 +299,4 @@ header:not(body > header)
   @include media-query($on-palm)
     > *
       min-width: 33vw
-
-
-.featured
-  background-color: var(--black-color)
-  border: 1px solid var(--primary-color)
-  // TODO: Better variable opacity solution, e.g. https://stackoverflow.com/a/41265350
-  box-shadow: 0 1px 8px 4px color-mix(in hsl, var(--primary-color) 25%, transparent)
-  // TODO: review relative color syntax, e.g. https://stackoverflow.com/a/71098929
     
