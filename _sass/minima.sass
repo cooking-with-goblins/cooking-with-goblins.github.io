@@ -71,25 +71,28 @@ $big-desktop-up:        1800px  !default
     --scale-base: 1em
     --scale-ratio: 1.333
 
-    --primary-color-darker: hsl(153, 54%, 22%)
-    --primary-color: hsl(154, 88%, 61%)
-    --primary-color-lighter: hsl(141, 100%, 93%)
-    --secondary-color-darker: hsl(307, 96%, 69%)
-    --secondary-color: hsl(307, 100%, 79%)
-    --tertiary-color: hsl(259, 48%, 41%)
-    --tertiary-color-darker: hsl(260, 71%, 21%)
-    --white-color: hsl(332, 100%, 97%)
-    --black-color: hsl(260, 96%, 10%)
-    --black-color-lighter: hsl(260, 72%, 21%)
+    --primary-color-darker:     hsl(153, 54%, 22%)
+    --primary-color:            hsl(154, 88%, 61%)
+    --primary-color-lighter:    hsl(141, 100%, 93%)
+    --secondary-color-darker:   hsl(307, 96%, 69%)
+    --secondary-color:          hsl(307, 100%, 79%)
+    --tertiary-color:           hsl(259, 48%, 41%)
+    --tertiary-color-darker:    hsl(260, 71%, 21%)
+    --white-color:              hsl(332, 100%, 97%)
+    --black-color:              hsl(260, 96%, 10%)
+    --black-color-lighter:      hsl(260, 72%, 21%)
 
-    --bg-color: var(--white-color)
-    --highlight-color: var(--tertiary-color)
-    --link-color: var(--primary-color)
-    --shadow-color:var(--black-color-lighter)
-    --text-color: white
-    --heading-color: var(--primary-color)
-    --theme-color: var(--primary-color-lighter)
-    --theme-text-color: var(--black-color)
+    --bg-color:                 var(--white-color)
+    --highlight-color:          var(--tertiary-color)
+    --link-color:               var(--primary-color)
+    --shadow-color:             var(--black-color-lighter)
+    --text-color:               white
+    --heading-color:            var(--primary-color)
+    --theme-color:              var(--primary-color-lighter)
+    --theme-text-color:         var(--black-color)
+
+    @media screen and (prefers-color-scheme: light)
+        --text-color:           black
 
 [data-brand="itch"]
     --brand-color: hsl(359, 93%, 67%)
