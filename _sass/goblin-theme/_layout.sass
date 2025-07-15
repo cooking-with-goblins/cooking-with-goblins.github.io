@@ -1,7 +1,7 @@
 //
 // ===Site header===
 //
-body > header // site-wide header
+header:where(body > *) // site-wide header
 	+flex-column
 	min-height: $spacing-unit * 1.865
 	text-align: center
@@ -25,7 +25,7 @@ body > header // site-wide header
 		small
 			//word-spacing: initial
 
-	&+ nav
+	nav:has(~&), & ~ nav // This will select a nav on *either* side of a "root" header
 		display: flex
 		font-family: "Take Coffee"
 		font-size: 24px

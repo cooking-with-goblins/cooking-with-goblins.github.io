@@ -88,10 +88,10 @@ section, .block-emphasis, .showcase > *
 		color: var(--white-color)
 
 
-body > header // site-wide header
+header:where(body > *) // site-wide header
 	background-color: var(--header-color)
 
-	&+ nav
+	nav:has(~&), & ~ nav // This will select a nav on *either* side of a "root" header
 		background-color: var(--tertiary-color)
 
 		li:has(a:active)
