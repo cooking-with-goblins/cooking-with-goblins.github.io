@@ -10,4 +10,8 @@ max_line_length = 80
 trim_trailing_whitespace = true
 
 [*.{md,mdx,markdown}]
+indent_style = space
 trim_trailing_whitespace = false
+
+[*.{yaml,yml}]
+indent_style = space
