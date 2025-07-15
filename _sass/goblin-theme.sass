@@ -1,0 +1,79 @@
+@charset "utf-8"
+@use "sass:color"
+
+
+// Define defaults for each variable.
+
+$base-font-family: "Poor Story", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
+$base-font-size:   16px !default
+$base-font-weight: 400 !default
+$small-font-size:  $base-font-size * 0.875 !default
+$base-line-height: 1.5 !default
+
+$spacing-unit:     30px !default
+
+$text-color:       #111 !default
+$background-color: #fdfdfd !default
+$brand-color:      #2a7ae2 !default
+
+$goblin-green: hsl(154, 88%, 61%)
+$goblin-pink:  hsl(307, 100%, 79%)
+
+$grey-color:       #828282 !default
+// $grey-color-light: lighten($grey-color, 40%) !default
+// $grey-color-dark:  darken($grey-color, 25%) !default
+$grey-color-light: color.scale($grey-color, $lightness: 40%) !default
+$grey-color-dark:  color.scale($grey-color, $lightness: -25%) !default
+
+$table-text-align: left !default
+
+// Width of the content area
+$content-width:    800px !default
+
+
+$tablet-up:             600px   !default
+$tablet-landscape-up:   900px   !default
+$desktop-up:            1200px  !default
+$big-desktop-up:        1800px  !default
+
+
+=media-query-progressive($device)
+	@media screen and (min-width: $device)
+		@content
+
+=relative-font-size($ratio)
+	font-size: $base-font-size * $ratio
+
+=pill-shaped
+	border-radius: 9999px
+
+=rounded-rect
+	border-radius: clamp(.5rem, 1vmin, 3rem)
+	border-radius: 1vmin
+
+=raised
+	box-shadow: 0 4px 16.1px 7px hsla(0, 0%, 0%, 25%)
+
+=flex-column
+	display: flex
+	flex-direction: column
+
+// Import partials.
+@import "goblin-theme/typography", "goblin-theme/themes", "goblin-theme/base", "goblin-theme/layout", "goblin-theme/syntax-highlighting"
+
+
+[data-brand="itch"]
+	--brand-color: hsl(359, 93%, 67%)
+	--icon-shape: "/assets/brands.svg#itch-io"
+
+[data-brand="bluesky"]
+	--brand-color: hsl(206, 99%, 49%)
+	--icon-shape: "/assets/brands.svg#bluesky"
+
+[data-brand="reddit"]
+	--brand-color: #FF5700
+	--icon-shape: "assets/brands.svg#reddit"
+
+[data-brand="facebook"]
+	--brand-color: hsl(210, 100%, 40%)
+	--icon-shape: "assets/brands.svg#facebook"
