@@ -1,4 +1,4 @@
-:root
+:root // TODO: Accessibility / contrast pass on colours
 	--scale-base: 1em
 	--scale-ratio: 1.333
 
@@ -43,6 +43,8 @@
 		--block-color-b:        white
 		--header-color:         unset
 		--tertiary-color:		var(--gradient-hi)
+		nav:has(~ header:where(body > *)),
+		header:where(body > *) ~ nav,
 		main section section *
 			--emphasis-color:   var(--primary-color-darker)
 			--secondary-color:  var(--secondary-color-darker)
