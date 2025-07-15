@@ -45,6 +45,10 @@ $goblin-pink:  hsl(307, 100%, 79%)
         --block-color-a:        white
         --block-color-b:        white
         --header-color:         unset
+        main section section *
+            --emphasis-color:   var(--primary-color-darker)
+            --secondary-color: var(--secondary-color-darker)
+
 
 body
     color: var(--text-color)
@@ -55,8 +59,11 @@ body
 a, em, %headings
     color: var(--emphasis-color)
 
+
 em:nth-child(even), a:hover
     --emphasis-color: var(--secondary-color)
+    &:not(.override-hack) // HACK: Make color override have high enough specicifity to apply
+        --emphasis-color: var(--secondary-color)
 
 
 section, .block-emphasis, .showcase > *
@@ -72,13 +79,14 @@ section, .block-emphasis, .showcase > *
         --block-color: var(--block-color-b)
         *
             --block-color: var(--block-color-a)
-    
+
+
 .block-emphasis
     +raised
     --block-color: var(--secondary-color-darker)
     border: 0.1rem solid var(--secondary-color)
     color: var(--white-color)
-    &:has(a), &:is(a), &:not(.override-hack) // Adding a nesting seletor with a class gives specifity 0-2-0, needed to override .alternating &:nth-child from above
+    &:has(a), &:is(a), &:not(.override-hack) // HACK: Adding a nesting seletor with a class gives specifity 0-2-0, needed to override .alternating &:nth-child from above
         --block-color: var(--secondary-color-darker)
         color: var(--white-color)
 
@@ -88,7 +96,7 @@ body > header // site-wide header
 
     &+ nav
         background-color: var(--tertiary-color)
-        
+
         li:has(a:active)
             background-color: var(--white-color)
 
