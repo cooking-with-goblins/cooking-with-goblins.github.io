@@ -14,11 +14,11 @@ layout: default
 		<ul class="showcase">
 			{% for game in site.games %}
 				<li>
-					<img src="favicon.ico" class="featured" alt="">
+					<img src="assets/img/{{ game.featured-img.src }}" class="featured" alt="{{ game.featured-img.alt }}">
 					<h3>{{game.name}}</h3>
 					{% if game.tags.size > 0 %}
 						<ul class="tags">
-							{%  for tag in game.tags %} 
+							{%  for tag in game.tags %}
 								<li>{{tag}}</li>
 							{% endfor %}
 						</ul>
