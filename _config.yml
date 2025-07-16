@@ -40,6 +40,7 @@ socials:
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-titles-from-headings
 
 # Collections
 collections:
