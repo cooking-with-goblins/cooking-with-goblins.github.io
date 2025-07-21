@@ -8,9 +8,8 @@ html
 	max-width: 100vw
 	scroll-behavior: smooth
 
-//
+
 // ===Reset some basic elements===
-//
 body, %headings,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure
@@ -18,10 +17,7 @@ dl, dd, ol, ul, figure
 	padding: 0
 
 
-
-//
 // ===Basic styling===
-//
 body
 	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family
 	-webkit-text-size-adjust: 100%
@@ -40,10 +36,7 @@ em
 	font-style: normal
 
 
-
-//
 // ===Set `margin-bottom` to maintain vertical rhythm===
-//
 %headings,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -52,27 +45,18 @@ section > section,
 	margin-bottom: $spacing-unit * 0.5
 
 
-
-//
 // ===`main` element===
-//
 main
 	display: block /* Default value of `display` of `main` element is 'inline' in IE 11. */
 
 
-
-//
 // ===Images===
-//
 img
 	max-width: 100%
 	vertical-align: middle
 
 
-
-//
 // ===Figures===
-//
 figure > img
 	display: block
 
@@ -80,10 +64,7 @@ figcaption
 	font-size: $small-font-size
 
 
-
-//
 // ===Lists===
-//
 ul
 	list-style: none
 //ul, ol
@@ -98,10 +79,7 @@ li
 	list-style: initial
 
 
-
-//
 // ===Links===
-//
 a
 	text-decoration: none
 
@@ -115,9 +93,7 @@ a
 			text-decoration: underline
 
 
-//
 // ===Blockquotes===
-//
 blockquote
 	color: $grey-color
 	border-left: 4px solid $grey-color-light
@@ -130,10 +106,7 @@ blockquote
 		margin-bottom: 0
 
 
-
-//
 // ===Code formatting===
-//
 pre,
 code
 	+relative-font-size(0.9375)

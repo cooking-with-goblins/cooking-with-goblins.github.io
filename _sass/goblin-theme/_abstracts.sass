@@ -45,18 +45,23 @@ $big-desktop-up:        1800px  !default
 	@media screen and (min-width: $device)
 		@content
 
+
 =relative-font-size($ratio)
 	font-size: $base-font-size * $ratio
 
+
 =pill-shaped
 	border-radius: 9999px
+
 
 =rounded-rect
 	border-radius: clamp(.5rem, 1vmin, 3rem)
 	border-radius: 1vmin
 
+
 =raised
 	box-shadow: 0 4px 16.1px 7px hsla(0, 0%, 0%, 25%)
+
 
 =flex-column
 	display: flex
