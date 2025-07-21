@@ -39,6 +39,7 @@ socials:
 logo:
   src: /assets/img/Goblins.png
   alt: "Cartoon goblins using a couldron. One is relaxing in the bubbling green liquid, the other stands beside wearing a chef's hat and wielding a wooden spoon."
+date_format: "%-d %b, %Y"
 
 # Build settings
 plugins:
