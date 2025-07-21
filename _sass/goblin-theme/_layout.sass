@@ -1,6 +1,9 @@
-//
-// ===Site header===
-//
+@use 'abstracts' as *
+@use 'base' as *
+
+// ==========================
+// --      Site header     --
+// ==========================
 header:where(body > *) // site-wide header
 	+flex-column
 	min-height: $spacing-unit * 1.865
@@ -97,9 +100,9 @@ header:where(body > *) // site-wide header
 //         margin-right: 0
 
 
-//
-// ===Site footer===
-//
+// ==========================
+// --        Footer        --
+// ==========================
 body > footer
 	align-items: center
 	display: flex
@@ -188,9 +191,9 @@ body > footer
 
 
 
-//
-// ===Page content===
-//
+// ==========================
+// --     Page content     --
+// ==========================
 main
 	padding: $spacing-unit * 0.5
 	flex: 1
@@ -238,9 +241,9 @@ main > section
 
 
 
-//
-// ===Posts===
-//
+// ==========================
+// --         Posts        --
+// ==========================
 header:not(body > header)
 	margin-bottom: $spacing-unit
 
@@ -277,9 +280,9 @@ header:not(body > header)
 
 
 
-//
-// ===Showcase===
-//
+// ==========================
+// --       Showcase       --
+// ==========================
 .showcase
 	display: flex
 	flex-flow: row wrap
