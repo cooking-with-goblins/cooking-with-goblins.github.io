@@ -10,7 +10,7 @@ How-tos coming soon.
 
 ### Style architecture
 
-The styles are achitected to sit somewhere between keeping things small and simple, and a more familiar 7-1 architectuire. 7-1 lite, if you will. Most of the 7 categories have a single stylesheet, internally organised into the traditional sections. As the project grows in complexity, these can be replaced with a more complex internal structure with little impact on consuming stylesheets.
+The styles are achitected to sit somewhere between keeping things small and simple, and a more familiar [7-1 architecture](https://archisacademy.com/en/blogs/sass-7-1-pattern) ([example project](https://github.com/KhomsiAdam/SASS-Architecture)). 7-1 lite, if you will. Most of the 7 categories have a single stylesheet, internally organised into the traditional sections. As the project grows in complexity, these can be replaced with a more complex internal structure with little impact on consuming stylesheets.
 
 > Because of the way Jekyll works, there is a higher level "main" file in /assets, to hook into Jekyll processing (it has blank YAML frontmatter), which imports the actual SASS styles from _sass/goblin-theme.sass, which would be the top-level main file of the project in "typical" architecture/
 
