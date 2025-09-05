@@ -5,12 +5,12 @@
 @use 'goblin-theme/layout' as *
 @use 'goblin-theme/themes' as *
 
-// HACK: Can't @extend across "modules", so we apply that here once everyhting
+// HACK: Can't @extend across "modules", so we apply that here once everything
 //       that declares %headings is upstream
 h1, h2, h3, h4, h5, h6
 	@extend %headings !optional
 
 
 %headings
-	font-family: "Take Coffee"
+	font-family: $heading-font
 	font-weight: $base-font-weight

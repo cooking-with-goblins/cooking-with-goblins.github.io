@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Take Coffee';
-    src: url('fonts/Take-Coffee.eot');
-    src: url('fonts/Take-Coffee.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Take-Coffee.woff2') format('woff2'),
-         url('fonts/Take-Coffee.woff') format('woff'),
-         url('fonts/Take-Coffee.ttf')  format('truetype'),
-         url('fonts/Take-Coffee.svg#Take Coffee') format('svg');
-}

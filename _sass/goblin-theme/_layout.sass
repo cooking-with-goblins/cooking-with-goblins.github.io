@@ -30,7 +30,7 @@ header:where(body > *) // site-wide header
 
 	nav:has(~&), & ~ nav // This will select a nav on *either* side of a "root" header
 		display: flex
-		font-family: "Take Coffee"
+		font-family: $heading-font
 		font-size: 24px
 		line-height: $base-line-height * $base-font-size * 2.25
 		position: sticky
