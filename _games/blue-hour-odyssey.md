@@ -6,7 +6,7 @@ tags:
     - Narrative
 link:
     text: Play Now
-    target: #
+    target: https://cookingwithgoblins.itch.io/blue-hour-odyssey
 featured-img:
     src: bho_title_slim.png
     alt: "Promotional image for Blue Hour Odyssey where three figures make their way through a dark blue landscape."
