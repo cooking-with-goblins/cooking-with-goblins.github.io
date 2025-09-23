@@ -65,14 +65,15 @@
 
 	@media screen and (prefers-color-scheme: light)
 		--text-color:           black
-		--gradient-lo:          #A587FF
-		--gradient-hi:          #CFBFFF
+		--gradient-hi:          hsl(142, 91%, 79%)
+		--gradient-lo:          hsl(141, 100%, 93%)
 		--light-showcase-bg:    #C3A9FF
-		--glow-color:			var(--primary-color-darker)
+		--glow-color:			hsl(254, 79%, 67%)
 		--block-color-a:        white
 		--block-color-b:        white
 		--header-color:         unset
 		--tertiary-color:		var(--gradient-hi)
+		--emphasis-color:		var(--tertiary-color-darker)
 		nav:has(~ header:where(body > *)),
 		header:where(body > *) ~ nav,
 		main section section *
