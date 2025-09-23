@@ -261,6 +261,9 @@ header:not(body > header)
 				padding: 1rem
 				+media-query-progressive($tablet-up)
 					gap: 1rem
+	&:has(h3)
+		img
+			aspect-ratio: 1.6
 	img
 		+rounded-rect
 		align-self: stretch
