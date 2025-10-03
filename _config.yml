@@ -23,8 +23,8 @@ tagline: Embrace absurdity
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Cooking with Goblins, a small Danish game studio - find us on the web!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://cookingwithgoblins.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 socials:
